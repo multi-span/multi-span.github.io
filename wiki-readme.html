@@ -7,15 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@qi2peng2">
-    <meta name="twitter:creator" content="@qi2peng2">
-    <meta name="twitter:title" content="HotpotQA: A Dataset for Diverse, Explainable Multi-hop Question Answering">
-    <meta name="twitter:description" content="HotpotQA is a question answering dataset featuring natural, multi-hop questions, with strong supervision for supporting facts to enable more explainable question answering systems. It is collected by a team of NLP researchers at Carnegie Mellon University, Stanford University, and Université de Montréal.">
-    <meta name="twitter:image" content="https://hotpotqa.github.io/img/question_types.png">
-    <meta property="og:image" content="https://hotpotqa.github.io/img/question_types.png">
 
-    <title>HotpotQA Homepage</title>
+    <title>MultiSpanQA Homepage</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -28,7 +21,7 @@
 
     <!-- Custom styles for this template -->
     <link href="css/clean-blog.min.css" rel="stylesheet">
-    <link href="css/hotpotqa.css" rel="stylesheet">
+    <link href="css/multispanqa.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/tomorrow.min.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/json.min.js"></script>
@@ -38,16 +31,13 @@
   <body>
 <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
   <div class="container">
-    <a class="navbar-brand" href="index.html">HotpotQA</a>
+    <a class="navbar-brand" href="index.html">MultiSpanQA</a>
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
       Menu
       <i class="fa fa-bars"></i>
     </button>
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav ml-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="blog.html">Blog</a>
-        </li>
         <li class="nav-item">
           <a class="nav-link" href="explorer.html">Explorer</a>
         </li>
@@ -62,8 +52,8 @@
     <div class="row">
       <div class="col-lg-8 col-md-10 mx-auto">
         <div class="site-heading">
-          <h1>HotpotQA</h1>
-          <span class="subheading">A Dataset for Diverse, Explainable <span class="line">Multi-hop</span> <span class="line">Question Answering</span></span>
+          <h1>MultiSpanQA</h1>
+          <span class="subheading">A Dataset for Multi-span<span class="line">Question Answering</span></span>
         </div>
       </div>
     </div>
@@ -74,8 +64,8 @@
 <div class="container">
 <div class="row">
 <div class="col-lg-8 col-md-10 mx-auto">
-<h2>Preprocessed Wikipedia for HotpotQA</h2>
-<p>To build HotpotQA, we downloaded the English Wikipedia dump on October 1<sup>st</sup>, 2017 from <a href="https://dumps.wikimedia.org/">Wikimedia</a>, and preprocessed it with (our own fork of) <a href="https://github.com/attardi/wikiextractor">WikiExtractor</a> for extracting plain text with hyperlinks, followed by <a href="https://stanfordnlp.github.io/CoreNLP/">Stanford CoreNLP</a> (<a href="http://nlp.stanford.edu/software/stanford-corenlp-full-2017-06-09.zip">version 3.8.0</a>) for tokenization and sentence segmentation.</p>
+<h2>Wiki</h2>
+<!---
 <p>The processed Wikipedia can be downloaded <a href="https://nlp.stanford.edu/projects/hotpotqa/enwiki-20171001-pages-meta-current-withlinks-processed.tar.bz2">here</a> (BZip2 format, 7,413,895,794 bytes, MD5<sup id="fnref:1"><a class="footnote-ref" href="#fn:1" rel="footnote">1</a></sup> <code>62b8027b5803173d4383669d8d162509</code>, distributed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0 License</a>). When decompressed<sup id="fnref:2"><a class="footnote-ref" href="#fn:2" rel="footnote">2</a></sup>, this results in a directory named <code>enwiki-20171001-pages-meta-current-withlinks-processed</code> with numerous subdirectories, each containing a few <code>.bz2</code> files (it is strongly suggested that you read these files programmatically, e.g. through <a href="https://docs.python.org/3/library/bz2.html">the <code>bz2</code> package in Python</a>, instead of decompressing them, which will take up a lot of disk space). Each of these <code>.bz2</code> file contains a few processed Wikipedia pages in JSON format. Each JSON object is on its own line, and has the following format</p>
 <pre><code class="json">{
     &quot;id&quot;: 12,
@@ -104,6 +94,7 @@
 </li>
 </ol>
 </div>
+--->
 </div>
 </div>
 </div>
@@ -114,8 +105,7 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-8 col-md-10 mx-auto">
-            <p class="copyright text-muted">Copyright &copy; HotpotQA Team, 2018-2019.</p>
-            <p class="copyright text-muted">Theme adapted from Start Bootstrap's <a href="https://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> template.</p>
+              <p class="copyright text-muted">Website is adapted from <a href="https://hotpotqa.github.io">HotpotQA</a> website.</p>
           </div>
         </div>
       </div>

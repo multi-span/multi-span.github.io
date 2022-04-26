@@ -145,9 +145,9 @@ function render(id) {
       q = question.join(', '),
       c = ''
   for(let i=0; i <= context.length; i++) {
-    if(example.label[i] !== 'O'){
+    if(example.label[i] !== 'O' && context[i]){
       c += "<span style='color: red'>" + context[i] + ' ' + "</span>"
-    } else {
+    } else if(context[i]) {
       c += context[i] + ' '
     }
   }
@@ -156,7 +156,8 @@ function render(id) {
 }
 
 function showRandomExample() {
-  var id = Math.floor(Math.random() * examples.length);
+  // var id = Math.floor(Math.random() * examples.length);
+  var id = 1;
   // var example = examples[id];
   // showParagraph('a', example)
   // showParagraph('b', example)

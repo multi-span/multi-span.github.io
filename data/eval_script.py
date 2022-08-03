@@ -90,7 +90,10 @@ def compute_scores(golds, preds, eval_type='em',average='micro'):
         nb_gold += max(len(gold), 1)
         nb_pred += max(len(pred), 1)
         if eval_type=='em':
-            nb_correct += len(gold.intersection(pred))
+            if len(gold) == 0 and len(pred) == 0:
+                nb_correct += 1
+            else:
+                nb_correct += len(gold.intersection(pred))
         else:
             p_score, r_score = count_overlap(gold, pred)
             nb_correct_p += p_score
@@ -171,6 +174,16 @@ def multi_span_evaluate(preds, golds):
 
 
 # ------------ START: This part is for nbest predictions with confidence ---------- #
+
+def eval_with_nbest_preds(nbest_file, gold_file):
+    """ To use this part, check nbest output format of huggingface qa script """
+    best_threshold,_ = find_best_threshold(nbest_file, gold_file)
+    nbest_preds = read_nbest_pred(nbest_file)
+    golds = read_gold(gold_file)
+    preds = apply_threshold_nbest(best_threshold, nbest_preds)
+    return multi_span_evaluate(preds, golds)
+
+
 def check_overlap(offsets1, offsets2):
     if (offsets1[0]<=offsets2[0] and offsets1[1]>=offsets2[0]) or\
        (offsets1[0]>=offsets2[0] and offsets1[0]<=offsets2[1]):

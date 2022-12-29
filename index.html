@@ -15,22 +15,28 @@
 
     <!-- Custom fonts for this template -->
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+    integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet'
+    type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'
+    rel='stylesheet' type='text/css'>
 
     <!-- Custom styles for this template -->
     <link href="css/clean-blog.min.css" rel="stylesheet">
     <link href="css/multispanqa.css" rel="stylesheet">
     
-<meta name="google-site-verification" content="h3zCtOJy9KzG1XWf5-3ppU1liaJ8NkpGvK_BbOOq3-4" />
-  </head>
+  <meta name="google-site-verification" content="h3zCtOJy9KzG1XWf5-3ppU1liaJ8NkpGvK_BbOOq3-4" />
+</head>
 
-  <body>
+
+<body>
 <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
   <div class="container">
     <a class="navbar-brand" href="index.html">MultiSpanQA</a>
-    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+        data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+        aria-label="Toggle navigation">
       Menu
       <i class="fa fa-bars"></i>
     </button>
@@ -58,42 +64,53 @@
   </div>
 </header>
 
-    
-<!-- Main Content -->
-<div class="container" id="main">
-  <div class="row">
-    <div class="col-lg-4">
-      <div class="list-group">
-        <div class="list-group-item"><h4>What is MultiSpanQA?</h4>
-        <p>MultiSpanQA is a question answering dataset focuses on questions with multi-span answers.</p>
-        <p>For more details about MultiSpanQA, please refer to our paper:</p>
-        <p class="text-center">
-          <a href="https://aclanthology.org/2022.naacl-main.90.pdf"><button type="button" class="btn btn-info">(Haonan Li, et al. 2022)</button></a>
-        </p>
+  <!-- Main Content -->
+  <div class="container" id="main">
+    <div class="row">
+      <div class="col-lg-4">
+        <div class="list-group">
+          <div class="list-group-item">
+            <h4>What is MultiSpanQA?</h4>
+            <p>MultiSpanQA is a question answering dataset focuses on questions with multi-span answers.</p>
+            <p>For more details about MultiSpanQA, please refer to our paper:</p>
+            <p class="text-center">
+              <a href="https://aclanthology.org/2022.naacl-main.90.pdf"><button type="button"
+                  class="btn btn-info">(Haonan Li, et al. 2022)</button></a>
+            </p>
+          </div>
+          <div class="list-group-item">
+            <h4>Getting started</h4>
+            <p>MultiSpanQA is distributed under a <a rel="license"
+                href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0 License</a>.
+            <p>Datasets can be downloaded below:</p>
+		    </p>
+            <p class="text-center">
+              <a href="data/MultiSpanQA_data.zip"><button type="button" class="btn btn-success">MultiSpanQA</button></a>
+            </p>
+		    </p>
+            <p class="text-center">
+              <a href="data/MultiSpanQA_expand_data.zip"><button type="button" class="btn btn-success">MultiSpanQA 
+                      Expanded</button></a>
+            </p>
+            <p>To reproduce the baseline results reported in our paper, visit our <a 
+              href="https://github.com/haonan-li/MultiSpanQA">github repo</a>.</p>
+          </div>
+        <div class="list-group-item">
+            <h4>Evaluation</h4>
+            <p>You can evaluate your model with our evluation script by running: 
+              <code>python eval_script.py --pred_file &lt;path_to_prediction&gt;  --gold_file &lt;path_to_gold&gt;</code></p>
+            </p>
+            <p class="text-center">
+              <a href="data/eval_script.py"><button type="button" class="btn btn-secondary">Evaluattion 
+                      script</button></a>
+            </p>
+            <p>You can submit your prediction by sending email to <a
+                href="nathan.8270.n@gmail.com">nathan.8270.n@gmail.com</a> with the title "MultiSpanQA submission
+            (multi/expand/both) (your model name)" and the same format of <a
+                href="data/sample_predictions.json">sample prediction file</a>.</p>
         </div>
-        <div class="list-group-item"><h4>Getting started</h4>
-        <p>MultiSpanQA is distributed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0 License</a>. 
-        <p>Datasets can be downloaded below:</p>
-		</p>
-        <p class="text-center">
-          <a href="data/MultiSpanQA_data.zip"><button type="button" class="btn btn-success">MultiSpanQA</button></a>
-        </p>
-		</p>
-        <p class="text-center">
-          <a href="data/MultiSpanQA_expand_data.zip"><button type="button" class="btn btn-success">MultiSpanQA Expanded</button></a>
-        </p>
-        <p>To reproduce the baseline results reported in our paper, visit our <a href="https://github.com/haonan-li/MultiSpanQA">github repo</a>.</p>
-        </div>
-        <div class="list-group-item"><h4>Evaluation</h4>
-        <p>You can evaluate your model with our evluation script by running: <code>python eval_script.py --pred_file &lt;path_to_prediction&gt;  --gold_file &lt;path_to_gold&gt;</code></p>
-		</p>
-        <p class="text-center">
-          <a href="data/eval_script.py"><button type="button" class="btn btn-secondary">Evaluattion script</button></a>
-        </p>
-        <p>You can submit your prediction by sending email to <a href="nathan.8270.n@gmail.com">nathan.8270.n@gmail.com</a> with the title "MultiSpanQA submission (multi/expand/both) (your model name)" and the same format of <a href="data/sample_predictions.json">sample prediction file</a>.</p>
-        </div>
-  </div>
-</div>
+      </div>
+    </div>
 <div class="col-lg-8">
   <div class="card card-outline-secondary">
     <div class="card-header">
@@ -367,6 +384,27 @@
     <!-- Custom scripts for this template -->
     <script src="js/clean-blog.min.js"></script>
     
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom scripts for this template -->
+  <script src="js/clean-blog.min.js"></script>
+
+  <script>
+    const $cards = $('.card');
+    for(let i = 0; i < $cards.length; i++) {
+      for(let j = 0; j < 6; j++) {
+        const arr = $($cards[i]).find(`tr td:nth-child(${j+3})`);
+        let index = 0;
+        Array.from(arr).reduce((pre, cur, idx) => {
+          if(Number(cur.innerText) > pre) {
+            index = idx
+            return Number(cur.innerText)
+          } else return pre
+        }, 0)
+        $(arr[index]).css('font-weight', 700)
+      }
+    }
+  </script>
+
 
   </body>
 
